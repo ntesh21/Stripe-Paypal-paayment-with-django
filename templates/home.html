@@ -1,0 +1,31 @@
+{% block style %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style type="text/css">
+  .heading h1{
+    margin-left: 570px;
+     margin-top: 70px;
+  }
+  .button-down{
+    margin: 250px 0px;
+  }
+  .button-down a{
+    margin-left: 10px;
+  }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="heading">
+  <h1>Packages</h1>
+</div>
+<div class="container">
+  <div class="button-down text-center">
+    <h2>Package One</h2>
+      <a href="{% url 'stripe' %}" class="btn btn-primary">Pay through Card</a>
+      <a href="{% url 'paypal_pay' %}" class="btn btn-primary">Pay through Paypal</a>
+  </div>
+  
+</div>
+{% endblock %}

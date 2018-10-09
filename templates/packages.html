@@ -1,0 +1,24 @@
+<!-- templates/packages.html -->
+<div>
+<h2>Pay Here</h2>
+<form action="{% url 'charge' %}" method="post">
+  {% csrf_token %}
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key= "{{key}}"
+          data-description="TripTNT Payment"
+          data-amount="500000"
+          data-locale="auto"></script>
+</form>
+</div>
+<!-- 
+<div>
+<h2>Standard Package</h2>
+<form action="{% url 'charge' %}" method="post">
+  {% csrf_token %}
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key= "pk_test_dMvVqawAdvC0iFYM3pbnFyqr"
+          data-description="TripTNT Payment"
+          data-amount="500000"
+          data-locale="auto"></script>
+</form>
+</div> -->
